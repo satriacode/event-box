@@ -76,7 +76,7 @@ class EventBoxAdmin {
                                         </tr>
                                         <tr>
                                             <?php $nextSunday = date('Y-m-d', strtotime('next sunday')); ?>
-                                            <td class="first"><label for="name">Service Date</label></td>
+                                            <td class="first"><label for="name">Date</label></td>
                                             <td><input type="date" required name="event_date" value="<?php echo isset($event_date_e)? $event_date_e : $nextSunday; ?>" id="event_date"></td>
                                         </tr>
                                         <tr>
