@@ -9,6 +9,8 @@
     Author URI: https://satriacode.org
 */
 
+global $wpdb;
+
 define('PLUGIN_PREFIX', 'event_box_');
 define('TABLE_REGISTRATION', $wpdb->prefix . PLUGIN_PREFIX . 'attendee_registration');
 define('TABLE_SETUP', $wpdb->prefix . PLUGIN_PREFIX . 'event_setup');
