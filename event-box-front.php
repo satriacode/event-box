@@ -60,8 +60,8 @@ class EventBoxFront {
                         <input type="number" required name="phone" value="' . ( isset( $_POST['phone']) ? $phone : null ) . '">
                     </div>
                     <div>
-                        <label for="service_day">Service Date <strong style="color: red">*</strong></label>
-                        <input type="text" required name="service_day" readonly value="' .date('d-m-Y', strtotime($event_date_e)). '">
+                        <label for="event_date">Date <strong style="color: red">*</strong></label>
+                        <input type="text" required name="event_date" readonly value="' .date('d-m-Y', strtotime($event_date_e)). '">
                     </div>
                     <div>
                         <label for="bio">If you have further enquires, please inform us below</label>
