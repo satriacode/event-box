@@ -26,7 +26,14 @@ add_action('admin_menu', 'event_box_add_admin_menu');
 function event_box_add_admin_menu()
 {
     error_log('add menu');
-    add_menu_page('Event Box Page', 'Event Box Menu', 'manage_options', __FILE__, array(new EventBoxAdmin, 'event_box_admin_page'), 'dashicons-calendar');
+    add_menu_page('Event Box Page', 'Event Box', 'manage_options', __FILE__, array(new EventBoxAdmin, 'event_box_admin_page'), 'dashicons-calendar');
 }
 
 add_shortcode('event_box', array(new EventBoxFront, 'event_box_shortcode'));
+
+function event_box_enqueue_admin_scripts() {
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('event-box-admin', plugins_url('js/admin.js', __FILE__), array('jquery'), '1.0.0', true);
+}
+
+add_action('admin_enqueue_scripts', 'event_box_enqueue_admin_scripts');
